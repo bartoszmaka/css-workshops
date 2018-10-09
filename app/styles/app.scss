@@ -5,3 +5,247 @@
 *:after {
   box-sizing: border-box;
 }
+
+body { font-family: helvetica, sans-serif; }
+
+section {
+  padding: 100px 0px;
+  background: white;
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.page-header {
+  padding-top: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home {
+    color: gold;
+    font-size: 2rem;
+    font-family: cursive;
+  }
+
+  a { text-decoration: none; }
+
+  nav {
+    display: flex;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  background: url(https://placecage.com/1920/1080);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  justify-content: center;
+
+  h1 {
+    margin: 20px 0px;
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 10px 0px;
+    font-family: serif;
+    font-size: 3rem;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+
+  button {
+    font-weight: bold;
+    margin-top: 40px;
+    background: gold;
+    color: white;
+    padding: 25px 50px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+.heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  &--light { color: white }
+}
+.subheading {
+  font-style: italic;
+  font-size: 1.25rem;
+  color: silver;
+}
+
+.services {
+  text-align: center;
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
+  .service {
+    padding: inherit 20px;
+    flex: 1 1 30%;
+    i {
+      line-height: 75px;
+      width: 75px;
+      height: 75px;
+      font-size: 2.5rem;
+      color: gold;
+      border: solid gold 2px;
+      border-radius: 50%;
+    }
+    .service__text {
+      font-size: 0.75rem;
+      color: silver;
+    }
+  }
+}
+
+.portfolio {
+  background: ghostwhite;
+  text-align: center;
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    flex-basis: 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 10px;
+    background: white;
+    padding-bottom: 10px;
+    img {
+      flex-grow: 1;
+    }
+  }
+  &__title {
+    padding-top: 10px;
+    margin-bottom: 0px;
+  }
+  &__category {
+    font-size: 0.75rem;
+    color: silver;
+  }
+}
+
+.team {
+  background: ivory;
+  height: 95vh;
+  text-align: center;
+  .team-list {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  &__member {
+    margin: 0px 30px;
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    img {
+      border-radius: 50%;
+      border: solid white 6px;
+    }
+  }
+  &__name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  .team_position {
+    color: gray;
+    margin-top: 5px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    i {
+      width: 50px;
+      height: 50px;
+      line-height: 40px;
+      border: solid black 3px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      margin: 0px 10px;
+    }
+  }
+}
+
+.contact-us {
+  text-align: center;
+  background: url(https://placecage.com/1920/1080);
+  margin-bottom: 200px;
+  .form-wrapper {
+    margin-top: 100px;
+    display: flex;
+    .form__column {
+      flex: 1;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+    .form__section {
+      margin-bottom: 15px;
+      input {
+        border: solid ghostwhite 2px;
+        padding: 0px 20px;
+        border-radius: 5px;
+        height: 40px;
+        display: block;
+        width: 100%;
+      }
+      textarea {
+        border: solid ghostwhite 2px;
+        border-radius: 5px;
+        min-height: 150px;
+        padding: 5px;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  button {
+    font-weight: bold;
+    margin-top: 40px;
+    background: gold;
+    color: white;
+    padding: 25px 50px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+  }
+}
